@@ -3,4 +3,6 @@ set autoindent
 set term=screen-256color
 set t_Co=256
 colorscheme molokai
-:set number
+:set number                                                                             
+noremap j k                                                                 
+noremap k j 
