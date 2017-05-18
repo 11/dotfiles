@@ -75,7 +75,7 @@
     setlocal foldmethod=syntax
 
     " 19.) Doesn't fold all methods on load up
-	set foldlevel=99
+    set foldlevel=99
 
 " ******************************************************************
 " *           Select lines and Vim Splits with mouse               *
@@ -111,12 +111,12 @@
     map <C-d> dd  
 
     " 27.) Map auto complete from <Ctrl+p> to <Ctrl+Space>
-	inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
-	\ "\<lt>C-n>" :
-	\ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
-	\ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
-	\ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
-	imap <C-@> <C-Space>    
+    inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+    \ "\<lt>C-n>" :
+    \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+    \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
+    \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+    imap <C-@> <C-Space>    
 
     "3. Map <Alt+Up> to swap the current line and the one above it
     "map <A-j>=dd p
@@ -129,10 +129,10 @@
 " *******************************************************************
     
     " 28.) Place VIm cursor on the line it was closed on 
-	if has("autocmd")
-		au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-		\| exe "normal! g'\"" | endif
-	endif
+    if has("autocmd")
+	au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+	\| exe "normal! g'\"" | endif
+    endif
 
 
 " *******************************************************************
@@ -155,7 +155,7 @@
     set noshowmode
 
     " 31.) Syntastic settings
-	set statusline+=%#warningmsg#
+    set statusline+=%#warningmsg#
     set statusline+=%{SyntasticStatuslineFlag()}
     set statusline+=%*
     let g:syntastic_always_populate_loc_list = 5
@@ -163,8 +163,7 @@
     let g:syntastic_check_on_open = 1
     let g:syntastic_check_on_wq = 0
 
-	" 32.) Nerdtree settings
-	" 33.) Open nerdtree if no file is specified
+    " 32.) Nerdtree settings
+    " 33.) Open nerdtree if no file is specified
     autocmd StdinReadPre * let s:std_in=1
-	autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif 
-	
+    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif 
