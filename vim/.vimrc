@@ -12,7 +12,7 @@
     " 2.) Turn on plugin autoindent settings 
     filetype plugin indent on
 
-    " 3.) Make tab with 4 spaces
+    " 3.) Make tab width 4 spaces
     set tabstop=4
     
     " 4.) When indenting with '>' or '<', use 4 spaces as width
