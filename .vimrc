@@ -44,6 +44,9 @@
 
     " 13.) Set highlighting on while typing during search
     set incsearch
+    
+    " 14.) Turn on Spell check for US English
+    setlocal spell spelllang=en_us
 
 " ******************************************************************
 " *          Terminal & colorscheme specific settings              *
