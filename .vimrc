@@ -73,7 +73,7 @@
     " (*NOTE: Gruvbox requires t_Co=256)
     set t_Co=16
 
-    " 3.) Solarized background set to dark
+    " 3.) Solarized background set to light or dark
     set background=light
 
     " 4.) Colorscheme set to molokai
