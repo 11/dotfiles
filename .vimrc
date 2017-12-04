@@ -3,7 +3,7 @@
 " Date:   May 16th, 2017
 
 " ******************************************************************
-" *               Auto-tab & other generic settings                *
+" *               	  Generic Settings	                   *
 " ******************************************************************
 
     " 1.) Turn off default VIm plugin indent settings
@@ -57,6 +57,15 @@
     " 17.) Highlights as typing and permanently keeps highlighting post search
     set incsearch
     set hlsearch
+    
+    " 18.) Turns on line numbers
+    set number
+    
+    " 20.) Allows for mouse to be used (scrolling, clicking, highlighting)
+    set mouse=a
+
+    " 21.) Column bar to appear at the 120 character mark (keeps lines from being too long)
+    set colorcolumn=120
 
 " ******************************************************************
 " *          Terminal & colorscheme specific settings              *
@@ -73,14 +82,11 @@
     " (*NOTE: Gruvbox requires t_Co=256)
     set t_Co=16
 
-    " 3.) Solarized background set to light or dark
+    " 3.) Solarized (and several other) backgrounds can be set to light or dark themes
     set background=light
 
     " 4.) Colorscheme set to molokai
     colorscheme solarized
-
-    " 5.) Turns on line numbers
-    set number
 
 " ******************************************************************
 " *                            Folds function                      *
@@ -91,16 +97,6 @@
 
     " 2.) Doesn't fold all methods on load up
     set foldlevel=99
-
-" ******************************************************************
-" *           Select lines and Vim Splits with mouse               *
-" ******************************************************************
-
-    " 1.) Allows for mouse to be used (scrolling, clicking, highlighting)
-    set mouse=a
-
-    " 2.) Column bar on the right
-    set colorcolumn=120
 
 " ******************************************************************
 " *          Turn off arrow keys and replace with home-row         *
