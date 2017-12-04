@@ -45,7 +45,7 @@
     " 13.) Turn on spellcheck for US English
     set spell spelllang=en_us
 
-    " 14.) Set Folding method to be manual
+    " 14.) Set Folding method to be based off of line indents
     set foldmethod=indent
 
     " 15.) Opens files to the right when vertical splitting
