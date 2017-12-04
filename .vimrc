@@ -3,7 +3,7 @@
 " Date:   May 16th, 2017
 
 " ******************************************************************
-" *               Auto-tab & other indent settings                 *
+" *               Auto-tab & other generic settings                *
 " ******************************************************************
 
     " 1.) Turn off default VIm plugin indent settings
@@ -42,11 +42,21 @@
     " 12.) Always keep the status bar active
     set laststatus=2
 
-    " 13.) Set highlighting on while typing during search
+    " 13.) Turn on spellcheck for US English
+    set spell spelllang=en_us
+
+    " 14.) Set Folding method to be manual
+    set foldmethod=indent
+
+    " 15.) Opens files to the right when vertical splitting
+    set splitright
+
+    " 16.) Opens files on the bottom when horizontal splitting
+    set splitbelow
+
+    " 17.) Highlights as typing and permanently keeps highlighting post search
     set incsearch
-    
-    " 14.) Turn on spellcheck for US English
-    setlocal spell spelllang=en_us
+    set hlsearch
 
 " ******************************************************************
 " *          Terminal & colorscheme specific settings              *
@@ -90,7 +100,7 @@
     set mouse=a
 
     " 2.) Column bar on the right
-    set colorcolumn=80
+    set colorcolumn=120
 
 " ******************************************************************
 " *          Turn off arrow keys and replace with home-row         *
@@ -112,10 +122,7 @@
 " *                  Favorite Eclipse Key-bindings                  *
 " *******************************************************************
 
-    " 1.) Map <Ctrl+d> to cut the current line of the cursor
-    map <C-d> dd
-
-    " 2.) Map auto complete from <Ctrl+p> to <Ctrl+Space>
+    " 1.) Map auto complete from <Ctrl+p> to <Ctrl+Space>
     inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
     \ "\<lt>C-n>" :
     \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
@@ -123,10 +130,10 @@
     \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
     imap <C-@> <C-Space>
 
-    " 3.) Map <Alt+Up> to swap the current line and the one above it
+    " 2.) Map <Alt+Up> to swap the current line and the one above it
     "map <A-j>=dd p
 
-    " 4.) Map <Alt+Down> to swap the current line and the one below it
+    " 3.) Map <Alt+Down> to swap the current line and the one below it
     "map <A-k>=dd k p
 
 " *******************************************************************
@@ -141,7 +148,6 @@
 
     " 2.) Delete all trailing whitespace on save
     autocmd BufWritePre * :%s/\s\+$//e
-
 
 " *******************************************************************
 " *             Loading VIm extensions thorugh pathogen             *
@@ -175,3 +181,4 @@
     " 5.) Open nerdtree if no file is specified
     autocmd StdinReadPre * let s:std_in=1
     autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+    let g:NERDTreeWinPos = "right"
