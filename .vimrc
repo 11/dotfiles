@@ -187,14 +187,14 @@
 " ******************************************************************
 " *          			Command Remapping 						   *
 " ******************************************************************
-	" 1.) Remap :WQ to :wq
-	:command WQ wq
+    " 1.) Remap :WQ to :wq
+    :command WQ wq
 
-	" 2.) Remap :Wq to :wq
-	:command Wq wq
+    " 2.) Remap :Wq to :wq
+    :command Wq wq
 
-	" 3.) Remap :W to :w
-	:command W w
+    " 3.) Remap :W to :w
+    :command W w
 
-	" 4.) Remap :Q to :q
-	:command Q q
+    " 4.) Remap :Q to :q
+    :command Q q
