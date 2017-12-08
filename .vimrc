@@ -1,9 +1,9 @@
 " Author: Douglas Rudolph
 " File:   .vimrc
-" Date:   May 16th, 2017
+" Date:   December 7th, 2017
 
 " ******************************************************************
-" *               	  Generic Settings	                   *
+" *               Auto-tab & other generic settings                *
 " ******************************************************************
 
     " 1.) Turn off default VIm plugin indent settings
@@ -45,7 +45,7 @@
     " 13.) Turn on spellcheck for US English
     set spell spelllang=en_us
 
-    " 14.) Set Folding method to be based off of line indents
+    " 14.) Set Folding method to be manual
     set foldmethod=indent
 
     " 15.) Opens files to the right when vertical splitting
@@ -57,15 +57,6 @@
     " 17.) Highlights as typing and permanently keeps highlighting post search
     set incsearch
     set hlsearch
-    
-    " 18.) Turns on line numbers
-    set number
-    
-    " 20.) Allows for mouse to be used (scrolling, clicking, highlighting)
-    set mouse=a
-
-    " 21.) Column bar to appear at the 120 character mark (keeps lines from being too long)
-    set colorcolumn=120
 
 " ******************************************************************
 " *          Terminal & colorscheme specific settings              *
@@ -82,11 +73,14 @@
     " (*NOTE: Gruvbox requires t_Co=256)
     set t_Co=16
 
-    " 3.) Solarized (and several other) backgrounds can be set to light or dark themes
-    set background=light
+    " 3.) Solarized background set to dark
+    set background=dark
 
     " 4.) Colorscheme set to molokai
     colorscheme solarized
+
+    " 5.) Turns on line numbers
+    set number
 
 " ******************************************************************
 " *                            Folds function                      *
@@ -97,6 +91,16 @@
 
     " 2.) Doesn't fold all methods on load up
     set foldlevel=99
+
+" ******************************************************************
+" *           Select lines and Vim Splits with mouse               *
+" ******************************************************************
+
+    " 1.) Allows for mouse to be used (scrolling, clicking, highlighting)
+    set mouse=a
+
+    " 2.) Column bar on the right
+    set colorcolumn=120
 
 " ******************************************************************
 " *          Turn off arrow keys and replace with home-row         *
@@ -178,3 +182,19 @@
     autocmd StdinReadPre * let s:std_in=1
     autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
     let g:NERDTreeWinPos = "right"
+
+
+" ******************************************************************
+" *          			Command Remapping 						   *
+" ******************************************************************
+	" 1.) Remap :WQ to :wq
+	:command WQ wq
+
+	" 2.) Remap :Wq to :wq
+	:command Wq wq
+
+	" 3.) Remap :W to :w
+	:command W w
+
+	" 4.) Remap :Q to :q
+	:command Q q
