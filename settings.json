@@ -86,6 +86,10 @@
         }
     ],
     "vim.easymotionMarkerFontFamily": "firacode",
+    "material-icon-theme.activeIconPack": "react_redux",
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "files.trimTrailingWhitespace": true,
     "editor.tabSize": 2,
     "editor.minimap.enabled": false,
     "editor.fontLigatures": true,
@@ -95,10 +99,5 @@
     "workbench.tree.indent": 22,
     "workbench.preferredHighContrastColorTheme": "Default Dark+",
     "window.zoomLevel": 1,
-    "material-icon-theme.activeIconPack": "react_redux",
-    "javascript.updateImportsOnFileMove.enabled": "never",
-    "files.trimTrailingWhitespace": true,
-    "[javascript]": {},
-    "diffEditor.ignoreTrimWhitespace": false,
     "zenMode.hideStatusBar": false
 }
