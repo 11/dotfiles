@@ -97,7 +97,6 @@
     "workbench.sideBar.location": "right",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.tree.indent": 22,
-    "workbench.preferredHighContrastColorTheme": "Default Dark+",
     "window.zoomLevel": 1,
     "zenMode.hideStatusBar": false
 }
