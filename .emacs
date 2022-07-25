@@ -1,4 +1,5 @@
-;;
+;(indent-relative-maybe)
+;
 ;; LOAD PACKAGE MANAGERS
 ;;
 
@@ -27,14 +28,22 @@
 
 (global-display-line-numbers-mode) ;; add line numbers
 (global-set-key (kbd "C-x C-c") 'compile) ;; run compile command with C-x C-c
+(global-set-key (kbd "TAB") 'tab-to-tab-stop) ;; will prevent line from over tabbing more than previous line
 
 (customize-set-variable 'scroll-bar-mode nil) ;; hide vertical scrollbar
 (customize-set-variable 'horizontal-scroll-bar-mode nil) ;; hide hortizonal scrollbar
 
+(setq-default tab-width 2) ;; sets default tab width to 2 spaces
+(setq-default electric-indent-inhibit t) ;; make auto-indenting sane
+(setq tab-stop-list (number-sequence 2 200 2)) ;; every tab will only add 2 more spaces than the one previous
+(setq indent-tabs-mode nil) ;; use spaces insted of tabs
+(setq web-mode-markup-indent-offset 2) ;; default tab width is 2 for HTML
+(setq web-mode-css-indent-offset 2) ;; default tab width is 2 for css
+(setq web-mode-code-indent-offset 2) ;; default tab width is 2 for javascript and php
 (setq custom-safe-themes t) ;; consider all downloaded themes as safe-to-run .elp files
 (setq inhibit-startup-screen t) ;; skip over welcome screen on startup
 (setq ring-bell-function 'ignore) ;; turn off bell sound
-(setq default-directory "~/Code/") ;; set default dired root directory to ~/Code
+;; (setq default-directory "~/Code/") ;; set default dired root directory to ~/Code
 (setq mac-command-modifier 'control) ;; use mac cmd key as ctrl key
 (setq special-display-function ;; idk, but it does something important with buffers
   (lambda (buffer &optional args)
@@ -111,3 +120,16 @@
 (use-package counsel-projectile ;; adds less strict fuzzy search to projectile
   :ensure t
   :config (counsel-projectile-mode))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(markdown-mode web-mode use-package terraform-mode solarized-theme smart-compile rust-mode naysayer-theme magit key-chord gruvbox-theme flatland-theme fira-code-mode evil-vimish-fold evil-leader evil-collection counsel-projectile color-theme buffer-move all-the-icons)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
