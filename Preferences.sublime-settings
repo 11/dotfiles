@@ -1,0 +1,32 @@
+{
+	"color_scheme": "Packages/gruvbox/gruvbox (Dark) (Hard).sublime-color-scheme",
+	"ensure_newline_at_eof_on_save": true,
+	"font_face": "Fira Code",
+	"font_options":
+	[
+		"subpixel_antialias"
+	],
+	"font_size": 16,
+	/*"font_face": "Fira Code",*/
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Rust",
+		"Six",
+		"Vintage",
+		"Vintageous",
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"material_theme_compact_sidebar": true,
+	"tab_size": 2,
+	"theme": "gruvbox.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"neovintageous_build_version": 11100,
+	"vintageous_i_escape_jj": true,
+	"update_check": true,
+}
