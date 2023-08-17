@@ -8,12 +8,17 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'othree/yajs.vim'
 Plugin 'othree/html5.vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'tpope/vim-fugitive'
 Bundle 'git://github.com/urso/haskell_syntax.vim.git'
 " Plugin 'mxw/vim-jsx'
 call vundle#end()
 
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/goyo.vim'
+
+" need to `brew install bat` in order for syntax highlighting to work
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " Open NerdTree on the right side of the screen
@@ -35,7 +40,7 @@ hi htmlTagName guifg=#c0c5ce ctermfg=251
 hi htmlEndTag guifg=#c0c5ce ctermfg=251
 
 let g:haskell_enable_quantification = 1
-let g:airline_theme='gruvbox'
+let g:airline_theme = 'base16_gruvbox_dark_hard'
 
 set t_Co=256
 set expandtab
@@ -63,15 +68,24 @@ set incsearch
 set hlsearch
 set splitright
 set splitbelow
+set ignorecase " makes search case insensitive
+set noshowmode " hide the modal bar - make room for  vim airline
 
 colorscheme gruvbox
 
 imap jj <Esc>
 
+" I can't type
 command W w
 command Q q
 command WQ wq
 command Wq wq
+command Wqa wqa
+command WQa wqa
+command WqA wqa
+command WQA wqa
+command Qa qa
+command QA qa
 
 " Place VIm cursor on the line it was closed on
 if has("autocmd")
@@ -81,3 +95,25 @@ endif
 
 " Delete all trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
+
+" the `option` key on macOS acts as a modifier key to show greek letters.
+" because of this, you can't just easily map the `option` key to act as
+" the `meta` key in (neo)vim. to get around this, I'm mapping the greek
+" letter that shows up when I press `option + <some-key>` to be `meta + <some-key>
+"
+" map `option + p` to open fzf fuzzy file search
+map π <M-p>
+nnoremap <M-p> :Files<Cr>
+
+" map `option + p` to fuzzy global string search
+nnoremap <M-f> :Rg<Cr>
+map ƒ <M-f>
+
+" map `opton + o` to open Nerd tree in the same directory as the buffer my cursor is in
+map ø <M-o>
+map <M-o> :NERDTreeToggle %<CR>
+
+
+" replaces a highlighted term with a string throughout an entire file
+nnoremap <Leader>r :%s///g<Left><Left>
+nnoremap <Leader>rc :%s///gc<Left><Left>
