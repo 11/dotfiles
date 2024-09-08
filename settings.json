@@ -1,0 +1,66 @@
+// vscode settings.json
+{
+    "editor.codeLens": false,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<esc>"
+            ]
+        }
+    ],
+    "workbench.sideBar.location": "right",
+    "explorer.compactFolders": false,
+    "workbench.tree.indent": 20,
+    "editor.tabSize": 2,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "telemetry.telemetryLevel": "off",
+    "workbench.cloudChanges.autoResume": "off",
+    "workbench.cloudChanges.continueOn": "off",
+    "update.mode": "none",
+    "settingsSync.keybindingsPerPlatform": false,
+    "editor.minimap.enabled": false,
+    "javascript.preferences.quoteStyle": "single",
+    "typescript.preferences.quoteStyle": "single",
+    "javascript.format.semicolons": "remove",
+    "typescript.format.semicolons": "remove",
+    "files.associations": {
+        "atlas.hcl": "atlas-config"
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "eslint.codeActionsOnSave.rules": [
+        "semi",
+        "@typescript-eslint/semi",
+        "@typescript-eslint/quotes",
+        "@typescript-eslint/object-curly-spacing",
+        "import/consistent-type-specifier-style",
+        "no-multi-spaces"
+    ],
+    "dotnet.preferCSharpExtension": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "godotTools.editorPath.godot4": "godot_mono",
+    "prisma.showPrismaDataPlatformNotification": false,
+    "dotnetAcquisitionExtension.enableTelemetry": false,
+    "window.zoomLevel": 2,
+    "workbench.colorTheme": "Default Dark+",
+    "cursor.cpp.enablePartialAccepts": true,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "vim.smartRelativeLine": true
+}
+
